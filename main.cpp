@@ -1,9 +1,13 @@
+/*
+main lab file
+
+*/
 #include <iostream>
-
-
-#include "funcs.h"
+#include "test-ascii.h"
 
 int main()
 {
+  ascii("Cat :3 Dog");
+
   return 0;
 }
