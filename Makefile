@@ -1,8 +1,8 @@
 main: main.o funcs.o test-ascii.o caesar.o decipher.o vigenere.o 
 	g++ -o main main.o funcs.o test-ascii.o caesar.o decipher.o vigenere.o 
 
-tests: tests.o funcs.o test-ascii.o
-	g++ -o tests tests.o funcs.o ascii.o
+tests: tests.o funcs.o test-ascii.o caesar.o decipher.o vigenere.o
+	g++ -o tests tests.o funcs.o test-ascii.o caesar.o decipher.o vigenere.o
 
 
 
@@ -21,4 +21,4 @@ decipher.o: decipher.cpp decipher.h
 vigenere.o: vigenere.cpp vigenere.h
 
 clean:
-	rm -f main.o funcs.o tests.o
+	rm -f main.o funcs.o tests.o test-ascii.o caesar.o decipher.o vigenere.o
